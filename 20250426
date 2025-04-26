@@ -17,12 +17,17 @@ def divide(a, b):
     return a / b
 
 
+def modulus(a, b):
+    return a % b
+
+
 while True:
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit")
+    print("5. Modulus")
+    print("6. Exit")
     choice = input("Enter your choice: ")
     if choice == '1':
         num1 = float(input("Enter first number: "))
@@ -46,6 +51,11 @@ while True:
         if result is not None:
             print(f"{num1} / {num2} = {result}")
     elif choice == '5':
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        result = modulus(num1, num2)
+        print(f"{num1} % {num2} = {result}")
+    elif choice == '6':
         break
     else:
         print("Invalid choice. Please try again.")
